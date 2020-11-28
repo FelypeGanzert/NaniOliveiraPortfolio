@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+h2.l-heading {
+  text-align: center;
+  font-size: 1.9rem;
+}
+
+div.bottom-line {
+  height: 7px;
+  width: 100px;
+  margin: 0 auto;
+  background: #333;
+}
+
+.play {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: 20px;
+      flex-basis: 20px;
+  text-shadow: black 2px 2px 5px;
+  font-size: 25px;
+  -webkit-transition: -webkit-transform ease-in-out 0.2s;
+  transition: -webkit-transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
+}
+
+.play i {
+  font-size: 20px;
+  position: relative;
+  padding: 15px;
+  margin-right: 20px;
+}
+
+.play i:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 4px #fff solid;
+  border-radius: 50%;
+}
+
+.play:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+/* main nav */
+nav#main-nav {
+  z-index: 20;
+  padding: 5px;
+  background: #333;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+nav#main-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav#main-nav ul li {
+  padding: 5px 10px;
+  margin: 0px 5px;
+}
+
+nav#main-nav ul li a {
+  color: #fff;
+  position: relative;
+}
+
+nav#main-nav ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: 0px;
+  width: 100%;
+  height: 3px;
+  background: #ffb20a;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+nav#main-nav ul li:hover a:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+/* section home */
+section#home {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: #fff;
+  /* video */
+  /* social links */
+}
+
+section#home .video-container {
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #333 url("./images/home-image.png") no-repeat center center/cover;
+}
+
+section#home .video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+
+section#home .social-links {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  margin-right: 25px;
+}
+
+section#home .social-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section#home .social-links ul li {
+  font-size: 45px;
+  -webkit-transition: -webkit-transform ease-in-out 0.2s;
+  transition: -webkit-transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
+}
+
+section#home .social-links ul li:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+section#home .social-links ul li a {
+  color: #fff;
+  text-shadow: black 3px 3px 5px;
+}
+
+section#home .social-links ul li:nth-child(3) {
+  margin-bottom: 40px;
+}
+
+section#home .content {
+  height: 100%;
+  width: 100%;
+}
+
+section#home .content .text {
+  text-shadow: black 2px 2px 5px;
+  padding: 30px 10px;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+section#home .content .text div#name {
+  margin-left: 100px;
+  text-align: left;
+  margin-bottom: 45vh;
+}
+
+section#home .content .text h1 {
+  font-size: 4rem;
+}
+
+section#home .content .text h3 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Section repertorio */
+section#repertorio {
+  padding: 60px 15px 0px 15px;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+section#repertorio div.glider > div {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#repertorio div#estilos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+  padding-top: 50px;
+}
+
+section#repertorio div#estilos h3 {
+  margin: 0px 10px;
+}
+
+section#repertorio div#estilos h3 a {
+  color: #333;
+}
+
+section#repertorio div#estilos h3 a:hover, section#repertorio div#estilos h3 a.active {
+  color: #b91414;
+}
+
+section#repertorio div.image-show {
+  margin: 0 auto;
+  max-height: 350px;
+  width: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+section#repertorio div.image-show .video-info {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 10px;
+  background: rgba(51, 51, 51, 0.616);
+  color: #fff;
+}
+
+section#repertorio div.image-show .video-info span {
+  display: block;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 1.3rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+section#repertorio div.image-show .video-info:hover {
+  cursor: pointer;
+}
+
+section#repertorio div.image-show .video-info:hover span {
+  opacity: 1;
+}
+
+section#repertorio div.image-show .video-info:hover div.play {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+section#repertorio div.image-show img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section#repertorio ol {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#repertorio ol div {
+  padding: 30px;
+  margin: 0px 10px;
+}
+
+section#repertorio ol li {
+  list-style: decimal;
+}
+/*# sourceMappingURL=main.css.map */
