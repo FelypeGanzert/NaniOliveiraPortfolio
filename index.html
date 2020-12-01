@@ -39,13 +39,13 @@
                 </div>
                 <div class="music-play">
                     <h3>Pra não dizer que não falei das flores</h3>
-                    <div class="play">
+                    <div class="play" id="main-video-play">
                         <i class="fas fa-play"></i>
                         Reproduzir
                     </div>
                 </div>
             </div>
-            <div id="main-video-play">
+            <div>
                 <div class="social-links">
                     <ul>
                         <li><a href="https://www.youtube.com/c/NaniOliveira/" target="_blank">
@@ -66,6 +66,11 @@
             </div>
         </div>
     </section>
+
+    <div id="main-video-container">
+        <i class="fas fa-times" id="close-main-video"></i>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/L60ynrInByM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
     <section id="repertorio">
         <div class="glider-contain container">
@@ -375,6 +380,26 @@
                 next: '.glider-next'
             }
         });
+
+        let btnMainVideo = document.querySelector('#main-video-play');
+        let btnCloseMainVideo = document.querySelector('#close-main-video');
+        let divMainVideoContainer = document.querySelector('#main-video-container');
+        let iframeMainVideo = document.querySelector('#main-video-container iframe');
+
+        btnMainVideo.addEventListener('click', mainVideoAction);
+        btnCloseMainVideo.addEventListener('click', mainVideoAction);
+
+        function mainVideoAction(event){
+            event.preventDefault();
+            if(divMainVideoContainer.classList.contains('visible')){
+                divMainVideoContainer.classList.remove('visible');
+                iframeMainVideo.src = '';
+                document.querySelector("#home").scrollIntoView();
+            } else{
+                divMainVideoContainer.classList.add('visible');
+                iframeMainVideo.src = 'https://www.youtube.com/embed/L60ynrInByM';
+            }
+        }
     </script>
 </body>
 
