@@ -196,9 +196,9 @@ div#main-video-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease-in-out;
     &.visible{
         transform: scale(1);
+        transition: transform 0.3s ease-in-out;
     }
     iframe{
         position: relative;
