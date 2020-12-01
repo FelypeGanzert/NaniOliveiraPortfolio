@@ -252,9 +252,9 @@ section#autorais {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            position: relative;
             .music-cover{
                 width: 100%;
-                position: relative;
                 margin-bottom: 5px;
                 img{
                     display: block;

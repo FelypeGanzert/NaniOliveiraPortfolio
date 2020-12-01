@@ -372,11 +372,11 @@ section#autorais div.container-musics div.music-item {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 section#autorais div.container-musics div.music-item .music-cover {
   width: 100%;
-  position: relative;
   margin-bottom: 5px;
 }
 
