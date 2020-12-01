@@ -234,3 +234,63 @@ section#repertorio {
         }
     }
 }
+
+/* Section autorais */
+section#autorais {
+    padding: 60px 5px 10px 5px;
+    div.container-musics{
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        overflow: hidden;
+        div.music-item{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .music-cover{
+                width: 100%;
+                position: relative;
+                margin-bottom: 5px;
+                img{
+                    display: block;
+                    min-width: 100%;
+                    object-fit: cover;
+                }
+                .overlay{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(51, 51, 51, 0.644);
+                    color: #fff;
+                    opacity: 0;
+                    transition: opacity 0.3s ease-in-out;
+                    cursor: pointer;
+                    .play{
+                        font-size: 20px;
+                        i{
+                            font-size: 15px;
+                        }
+                        &:hover{
+                            transform: none;
+                        }
+                    }
+                }
+                &:hover{
+                    .overlay{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

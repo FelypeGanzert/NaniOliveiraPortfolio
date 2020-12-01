@@ -335,4 +335,95 @@ section#repertorio ol div {
 section#repertorio ol li {
   list-style: decimal;
 }
+
+/* Section autorais */
+section#autorais {
+  padding: 60px 5px 10px 5px;
+}
+
+section#autorais div.container-musics {
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+section#autorais div.container-musics div.music-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#autorais div.container-musics div.music-item .music-cover {
+  width: 100%;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+section#autorais div.container-musics div.music-item .music-cover img {
+  display: block;
+  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section#autorais div.container-musics div.music-item .music-cover .overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.644);
+  color: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+section#autorais div.container-musics div.music-item .music-cover .overlay .play {
+  font-size: 20px;
+}
+
+section#autorais div.container-musics div.music-item .music-cover .overlay .play i {
+  font-size: 15px;
+}
+
+section#autorais div.container-musics div.music-item .music-cover .overlay .play:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
+section#autorais div.container-musics div.music-item .music-cover:hover .overlay {
+  opacity: 1;
+}
 /*# sourceMappingURL=main.css.map */
