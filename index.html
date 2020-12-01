@@ -382,12 +382,10 @@
         });
 
         let btnMainVideo = document.querySelector('#main-video-play');
-        let btnCloseMainVideo = document.querySelector('#close-main-video');
         let divMainVideoContainer = document.querySelector('#main-video-container');
         let iframeMainVideo = document.querySelector('#main-video-container iframe');
 
         btnMainVideo.addEventListener('click', mainVideoAction);
-        btnCloseMainVideo.addEventListener('click', mainVideoAction);
         divMainVideoContainer.addEventListener('click', mainVideoAction);
 
         function mainVideoAction(event){
