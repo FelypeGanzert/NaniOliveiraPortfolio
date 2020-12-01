@@ -372,11 +372,11 @@ section#autorais div.container-musics div.music-item {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
 }
 
 section#autorais div.container-musics div.music-item .music-cover {
   width: 100%;
+  position: relative;
   margin-bottom: 5px;
 }
 
@@ -387,11 +387,7 @@ section#autorais div.container-musics div.music-item .music-cover img {
      object-fit: cover;
 }
 
-section#autorais div.container-musics div.music-item .music-cover:hover .overlay {
-  opacity: 1;
-}
-
-section#autorais div.container-musics .overlay {
+section#autorais div.container-musics div.music-item .music-cover .overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,16 +410,20 @@ section#autorais div.container-musics .overlay {
   cursor: pointer;
 }
 
-section#autorais div.container-musics .overlay .play {
+section#autorais div.container-musics div.music-item .music-cover .overlay .play {
   font-size: 20px;
 }
 
-section#autorais div.container-musics .overlay .play i {
+section#autorais div.container-musics div.music-item .music-cover .overlay .play i {
   font-size: 15px;
 }
 
-section#autorais div.container-musics .overlay .play:hover {
+section#autorais div.container-musics div.music-item .music-cover .overlay .play:hover {
   -webkit-transform: none;
           transform: none;
+}
+
+section#autorais div.container-musics div.music-item .music-cover:hover .overlay {
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */
