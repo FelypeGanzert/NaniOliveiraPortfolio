@@ -86,7 +86,7 @@ div.bottom-line {
 
 /* main nav */
 nav#main-nav {
-  z-index: 10;
+  z-index: 100;
   padding: 5px;
   background: #333;
   position: -webkit-sticky;
@@ -229,7 +229,7 @@ section#home .content {
 
 section#home .content .text {
   text-shadow: black 2px 2px 5px;
-  padding: 30px 10px;
+  padding: 100px 10px;
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -240,14 +240,26 @@ section#home .content .text {
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 section#home .content .text div#name {
-  margin-left: 100px;
-  text-align: left;
-  margin-bottom: 45vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 50px 0px 0px 50px;
+  width: 450px;
+}
+
+section#home .content .text div#name img {
+  width: 100%;
+  -webkit-filter: drop-shadow(5px 5px 5px #333);
+          filter: drop-shadow(5px 5px 5px #333);
 }
 
 section#home .content .text h1 {
