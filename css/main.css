@@ -402,22 +402,24 @@ section#autorais {
 }
 
 section#autorais div.container-musics {
+  margin-top: 50px;
   padding: 20px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 20px;
+  gap: 30px;
   overflow: hidden;
 }
 
 section#autorais div.container-musics div.music-item {
+  font-size: 1.1rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -438,11 +440,12 @@ section#autorais div.container-musics div.music-item .music-cover {
   width: 100%;
   position: relative;
   margin-bottom: 5px;
+  /* video */
 }
 
 section#autorais div.container-musics div.music-item .music-cover img {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -485,5 +488,132 @@ section#autorais div.container-musics div.music-item .music-cover .overlay .play
 
 section#autorais div.container-musics div.music-item .music-cover:hover .overlay {
   opacity: 1;
+}
+
+section#autorais div.video-container {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  width: 100vw;
+  height: 100vh;
+  background: rgba(51, 51, 51, 0.98);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  visibility: hidden;
+}
+
+section#autorais div.video-container.visible {
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+section#autorais div.video-container .content {
+  position: relative;
+  max-width: 1000px;
+  outline: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+
+section#autorais div.video-container .content iframe {
+  max-width: 100%;
+}
+
+section#autorais div.video-container .content .lyric {
+  max-height: 80vh;
+  overflow-y: auto;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  padding: 20px;
+}
+
+section#autorais div.video-container .content .lyric pre {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+section#autorais div.video-container .content .lyric h3 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+section#autorais div.video-container .content .lyric div.bottom-line {
+  background: #ffb20a;
+  height: 5px;
+  width: 50px;
+  margin: 5px auto 20px auto;
+}
+
+section#autorais div.video-container .content .lyric .cifra {
+  display: none;
+  color: #ffb20a;
+  margin-top: 10px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+section#autorais div.video-container .content .lyric .cifra.visible {
+  display: block;
+}
+
+section#autorais div.video-container .content div.btn-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 5px 0px;
+}
+
+section#autorais div.video-container .content div.btn-container .btn-cifra {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
+section#autorais div.video-container .content div.btn-container .btn-cifra:hover {
+  border: 2px solid #ffb20a;
+}
+
+section#autorais div.video-container i {
+  z-index: 250;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+  font-size: 40px;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
