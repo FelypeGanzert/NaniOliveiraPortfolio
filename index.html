@@ -388,7 +388,6 @@ Porque eu gosto...
             event.preventDefault();
             let el = event.target;
             let videoContainer;
-            console.log(event.target);
             if(event.target.className == 'overlay') {
                 videoContainer = el.parentElement.querySelector(".video-container");
             } else if(event.target.className == 'play') {
@@ -431,7 +430,6 @@ Porque eu gosto...
                 event.target.textContent = "Exibir cifras";
                 cifras = event.target.parentElement.parentElement.querySelectorAll('.cifra');
             }
-            console.log(cifras);
             if(cifras != null){
                 cifras.forEach(c => c.classList.toggle('visible'));
             }
