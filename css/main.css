@@ -804,4 +804,86 @@ section#autorais div.video-container i {
   font-size: 40px;
   color: #fff;
 }
+
+input, textarea {
+  padding: 10px 15px;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+section#contact {
+  padding: 60px 5px 10px 5px;
+}
+
+section#contact form {
+  margin: 50px auto 10px auto;
+  max-width: 650px;
+}
+
+section#contact form div {
+  margin-bottom: 15px;
+}
+
+section#contact form div#basic-info {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+section#contact form div#ingresso-horas-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+section#contact form div#ingresso-horas-container div {
+  margin-bottom: 0;
+}
+
+section#contact form textarea {
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 50px;
+  height: 70px;
+  max-height: 150px;
+}
+
+section#contact form input[type="submit"] {
+  width: 100%;
+  background: #333;
+  border: none;
+  color: #fff;
+}
+
+section#contact form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+section#contact form input[type="radio"] {
+  margin-left: 10px;
+}
+
+footer#main-footer {
+  width: 100%;
+  background: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+footer#main-footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer#main-footer div {
+  margin: 0 auto;
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */

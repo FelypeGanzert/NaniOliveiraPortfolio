@@ -18,9 +18,9 @@
             <ul>
                 <li><a href="#home">INÍCIO</a></li>
                 <li><a href="#bio">BIO</a></li>
-                <li><a href="#repertorio">REPORTÓRIOS</a></li>
+                <li><a href="#repertorio">REPERTÓRIOS</a></li>
                 <li><a href="#autorais">AUTORAIS</a></li>
-                <li><a href="#">CONTATO</a></li>
+                <li><a href="#contact">CONTRATE</a></li>
             </ul>
         </div>
     </nav>
@@ -580,6 +580,67 @@ Nunca foi pro estrangeiro
         </div>
     </section>
 
+    <section id="contact">
+        <h2 class="l-heading">CONTRATE</h2>
+        <div class="bottom-line"></div>
+        <div class="container">
+            <form action="#">
+                <div>
+                    <p>
+                        Descreva um pouco sobre o evento que faremos juntos:
+                    </p>
+                </div>
+                <div id="basic-info">
+                    <input type="name" required placeholder="Seu Nome*" autocomplete="none">
+                    <input type="contact" required placeholder="Contato*" autocomplete="none">
+                    <input type="local" required placeholder="Nome do local do evento*" autocomplete="none">
+                    <input type="local-adress" required placeholder="Endereço do local*" autocomplete="none">
+                </div>
+                <div class="ambiente-div">
+                    <label for="ambiente">Em que ambiente será o evento?*</label>
+                    <textarea name="ambiente" id="ambiente" placeholder="Ex: Bar, Lanchonete, Casa de Festas"
+                        required></textarea>
+                </div>
+                <div>
+                    <label for="capacidade" style="margin-right: 15px;" >Qual a capacidade máxima desse ambiente?*</label>
+                    <input type="number" name="capacidade" id="capacidade" style="width: 100px;" min="0" required>
+                </div>
+                <div id="ingresso-horas-container">
+                    <div>
+                        Vai ter vendas de ingresso?
+                        <div style="width: 100%;">
+                            <input type="radio" name="ingressos" value="SIM" id="ingresso-sim" checked> <label
+                                for="ingresso-sim">SIM</label>
+                            <input type="radio" name="ingressos" value="NAO" id="ingresso-nao"> <label
+                                for="ingresso-nao">NÃO</label>
+                        </div>
+                    </div>
+                    <div>
+                        Quantas horas de show você vai precisar?
+                        <div style="width: 100%;">
+                            <input type="radio" name="horas" value="2h" id="horas-2h"> <label for="horas-2h">2hr</label>
+                            <input type="radio" name="horas" value="3h" id="horas-3h" checked> <label for="horas-3h">3hr</label>
+                            <input type="radio" name="horas" value="4h" id="horas-4h"> <label for="horas-4h">4hr</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="info">Informações Adicionais</label>
+                    <textarea name="info" id="info"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="ENVIAR">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer id="main-footer">
+        <div>
+            Desenvolvido por <a href="https://www.felypeganzert.com" target="_blank">Felype Ganzert</a> | &copy 2020
+        </div>
+    </footer>
+
     <script src="glider.min.js"></script>
     <script>
         // slider
@@ -615,7 +676,7 @@ Nunca foi pro estrangeiro
         // section about
         let divsSectionAbout = document.querySelectorAll('#bio #bio-grid-container div');
         divsSectionAbout.forEach(el => el.addEventListener('click', sectionAboutDivFocus));
-        function sectionAboutDivFocus(event){
+        function sectionAboutDivFocus(event) {
             let newItemActive = event.target.parentElement;
             let aboutContainer = newItemActive.parentElement;
             // change the active div class
@@ -628,7 +689,7 @@ Nunca foi pro estrangeiro
             let id = newItemActive.id;
             console.log(allItems)
             aboutContainer.style.gridTemplateAreas = ` "${allItems}" "${id} ${id} ${id}" `;
-            
+
         }
         // Videos autorais
         // Exibir

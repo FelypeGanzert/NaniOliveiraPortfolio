@@ -552,3 +552,70 @@ section#autorais {
         }
     }
 }
+
+// section contact
+input, textarea{
+    padding: 10px 15px;
+}
+input[type="radio"]{
+    cursor: pointer;
+}
+section#contact {
+    padding: 60px 5px 10px 5px;
+    
+    form{
+        margin: 50px auto 10px auto;
+        max-width: 650px;
+        div{
+            margin-bottom: 15px;
+        }
+        div#basic-info{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px
+        }
+        div#ingresso-horas-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            div{
+                margin-bottom: 0;
+            }
+        }
+        textarea{
+            display: block;
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 50px;
+            height: 70px;
+            max-height: 150px;
+        }
+        input[type="submit"]{
+            width: 100%;
+            background: #333;
+            border: none;
+            color: #fff;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        input[type="radio"]{
+            margin-left: 10px;
+        }
+    }
+}
+
+footer#main-footer{
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    a{
+        color: #fff;
+        text-decoration: underline;
+    }
+    div{
+        margin: 0 auto;
+        text-align: center;
+    }
+}
