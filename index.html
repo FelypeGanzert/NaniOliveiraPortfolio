@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nani Oliveira</title>
-    
+
     <!-- Place your kit's code here -->
     <script src="https://kit.fontawesome.com/088ed5f28c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/glider.min.css">
-    
-    <meta name="description" content="A música para mim é o ar que eu respiro, o alimento da minha alma, a força do meu ser, eu sei que parece brega e um belo de um clichê, mas é a mais pura verdade"/>
+
+    <meta name="description"
+        content="A música para mim é o ar que eu respiro, o alimento da minha alma, a força do meu ser, eu sei que parece brega e um belo de um clichê, mas é a mais pura verdade" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVKLB8LCQR"></script>
@@ -598,8 +599,8 @@ Nunca foi pro estrangeiro
         <h2 class="l-heading">CONTRATE</h2>
         <div class="bottom-line"></div>
         <div class="container">
-            <form action='pages/sucess' name='contact-form' method='POST' data-netlify-recaptcha='true'><input
-                    type='hidden' name='form-name' value='contact-form' />
+            <form action='pages/sucess.html' name='contact-form' method='POST' data-netlify-recaptcha='true'
+                data-netlify="true"><input type='hidden' name='form-name' value='contact-form' />
                 <div>
                     <p>
                         Descreva um pouco sobre o evento que faremos juntos:
@@ -645,29 +646,12 @@ Nunca foi pro estrangeiro
                     <label for="info">Informações Adicionais</label>
                     <textarea name="info" id="info"></textarea>
                 </div>
+                <div class="captcha">
+                    <div data-netlify-recaptcha="true"></div>
+                </div>
                 <div>
                     <input type="submit" value="ENVIAR">
                 </div>
-                <div class='g-recaptcha' data-sitekey='6LdAvUIUAAAAAHjrjmjtNTcXyKm0WKwefLp-dQv9'></div>
-                <noscript>
-                    <div>
-                        <div style="width: 302px; height: 422px; position: relative;">
-                            <div style="width: 302px; height: 422px; position: absolute;">
-                                <iframe
-                                    src="https://www.google.com/recaptcha/api/fallback?k=6LdAvUIUAAAAAHjrjmjtNTcXyKm0WKwefLp-dQv9"
-                                    frameborder="0" scrolling="no"
-                                    style="width: 302px; height:422px; border-style: none;">
-                                </iframe>
-                            </div>
-                        </div>
-                        <div
-                            style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
-                            <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
-                                style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;">
-                            </textarea>
-                        </div>
-                    </div>
-                </noscript>
             </form>
         </div>
     </section>
