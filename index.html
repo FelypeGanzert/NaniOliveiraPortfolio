@@ -17,7 +17,7 @@
         <div class="container">
             <ul>
                 <li><a href="#home">INÍCIO</a></li>
-                <li><a href="#">BIO</a></li>
+                <li><a href="#bio">BIO</a></li>
                 <li><a href="#repertorio">REPORTÓRIOS</a></li>
                 <li><a href="#autorais">AUTORAIS</a></li>
                 <li><a href="#">CONTATO</a></li>
@@ -73,6 +73,84 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
     </div>
+
+
+    <section id="bio">
+        <h2 class="l-heading">BIO</h2>
+        <div class="bottom-line"></div>
+        <div class="container" id="bio-grid-container">
+            <div id="my-self" class="active">
+                <img src="images/my-self.jpg" alt="Quem sou?">
+                <span class="box-title">Quem sou</span>
+                <div class="text">
+                    <h3>Olá, eu sou o Nani...</h3>
+                    <p>
+                        Sou uma pessoa que encara a vida como uma boa canção, ela não precisa ser virtuosa para ser boa,
+                        não precisa dos melhores instrumentos, nem das melhores vozes, não precisa ser extremamente
+                        baixa para mostrar imponência do grave e no meu caso ela definitivamente não será alta rs...
+                    </p>
+                    <p>
+                        A canção assim como a vida deve ser natural, individual e ao mesmo tempo diversa, excitante ao
+                        mesmo tempo que é monótona, ela pode dizer tudo, mas também não precisa dizer nada, ela só
+                        precisa ser como é, assim como eu sou do jeito que sou.
+                    </p>
+                </div>
+            </div>
+            <div id="history">
+                <img src="images/history.jpg" alt="Quem sou?">
+                <span class="box-title">História</span>
+                <div class="text">
+                    <h3>História</h3>
+                    <p>
+                        Um antigo professor de música me dizia “você só vira artista depois que sai do quarto, antes
+                        disso você é apenas um músico”, pois ser artista não é apenas desenvolver um talento e sim
+                        compartilhar ele com as outras pessoas. Na arte marcial a filosofia é a mesma, “você só vira um
+                        lutador depois da sua primeira luta” e ambas as frases dizem a mesma coisa que só se torna
+                        alguma coisa depois de aproveitar as vitórias e as derrotas daquela profissão e no dia 15 de
+                        setembro de 2017 eu fui pra luta, eu saí do quarto e postei meu primeiro vídeo no canal para
+                        todos verem, elogiarem e rirem de mim, com a câmera do celular, edição ruim e luz pior ainda,
+                        hoje, anos depois eu estou criando meu próprio site... De fato passa um filme na cabeça.
+                    </p>
+                </div>
+            </div>
+            <div id="music">
+                <img src="images/music.jpg" alt="Quem sou?">
+                <span class="box-title">Música</span>
+                <div class="text">
+                    <h3>Música</h3>
+                    <p>
+                        A música para mim é o ar que eu respiro, o alimento da minha alma, a força do meu ser, eu sei
+                        que parece brega e um belo de um clichê, mas é a mais pura verdade, não há prazer maior pra mim
+                        que fazer uma pessoa se emocionar comigo cantando e esse sentimento pode até ser de raiva, mas é
+                        um sentimento genuíno.
+                    </p>
+                    <p>
+                        Sempre priorizo a música brasileira, independente do estilo, acho que só os brasileiros
+                        conseguem falar o que eu sinto, só um brasileiro entende a dor de um “Tempo Perdido”, a
+                        cumplicidade de um “Partilhar”, a revolta da “Minha Alma” a versatilidade de um “Maluco Beleza”
+                        e por isso eu valorizo a cultura nacional.
+                    </p>
+                </div>
+            </div>
+            <div id="experience">
+                <img src="images/experience.jpg" alt="Quem sou?">
+                <span class="box-title">Experiência</span>
+                <div class="text">
+                    <h3>Experiência</h3>
+                    <p>
+                        Quando a gente inicia numa carreira artística, invariavelmente a gente pensa nos grandes shows,
+                        nos fãs enlouquecidos e nos montantes de dinheiro, mas eu aprendi logo no início da carreira que
+                        isso é o menos importante, sou um sonhador romântico e incurável, mas mesmo assim eu consigo
+                        aproveitar momentos reais, as pessoas que conheci, com quem trabalhei, que nunca mais vi, enfim,
+                        isso me fez ver que o momento é o lugar mais lindo do mundo, o passado geralmente te educa, o
+                        futuro te instiga a crescer, mas apenas o agora você sente, se emociona, apanha e glorifica,
+                        enfim eu aproveito cada momento com preciosidade, pois só aquele segundo existe, existiu ou
+                        existirá.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="repertorio">
         <div class="glider-contain container">
@@ -534,6 +612,24 @@ Nunca foi pro estrangeiro
             }
         }
 
+        // section about
+        let divsSectionAbout = document.querySelectorAll('#bio #bio-grid-container div');
+        divsSectionAbout.forEach(el => el.addEventListener('click', sectionAboutDivFocus));
+        function sectionAboutDivFocus(event){
+            let newItemActive = event.target.parentElement;
+            let aboutContainer = newItemActive.parentElement;
+            // change the active div class
+            previousItemActive = aboutContainer.querySelector('div.active');
+            previousItemActive.classList.remove("active")
+            newItemActive.classList.add("active");
+            // change grid template areas
+            let allItems = "my-self history music experience";
+            allItems = allItems.replace(newItemActive.id, "");
+            let id = newItemActive.id;
+            console.log(allItems)
+            aboutContainer.style.gridTemplateAreas = ` "${allItems}" "${id} ${id} ${id}" `;
+            
+        }
         // Videos autorais
         // Exibir
         let btnVideosAutorais = document.querySelectorAll('#autorais .music-cover');

@@ -226,6 +226,123 @@ div#main-video-container{
     }
 }
 
+/* Section about */
+section#bio {
+    padding: 60px 5px 10px 5px;
+
+    div#bio-grid-container{
+        margin-top: 50px;
+        display: grid;
+        grid-template-areas: 
+        'history music experience'
+        'my-self my-self my-self';
+        gap: 15px;
+        div{
+            height: 250px;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            &:hover{
+                cursor: pointer;
+                img{
+                    transform: scale(1.3);
+                }
+            }
+            img{
+                object-fit: cover;
+                max-width: 100%;
+                min-height: 100%;
+                transition: all 0.3s ease-in-out;
+            }
+            h3{
+                display: none;
+            }
+            span.box-title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(51, 51, 51, 0.61);
+                font-size: 2rem;
+                color: #fff;
+                text-shadow: #333 2px 2px 5px;
+            }
+            div.text{
+                display: none;
+                text-align: justify;
+            }
+        }
+
+        div.active{
+            height: auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: div-about-focus 0.5s ease-in-out;
+            &:hover{
+                cursor: auto;
+                img{
+                    transform: none;
+                }
+            }
+            img{
+                width: 50%;
+            }
+            h3{
+                display: block;
+                font-size: 1.7rem;
+                margin-bottom: 20px;
+            }
+            span.box-title{
+                display: none;
+            }
+            div.text{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                padding: 20px;
+                &:hover{
+                    cursor: auto;
+                }
+                p{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        div#my-self {
+            grid-area: my-self;
+        }
+        div#history {
+            grid-area: history;
+        }
+        div#music {
+            grid-area: music;
+        }
+        div#experience {
+            grid-area: experience;
+        }
+
+    }
+
+}
+
+@keyframes div-about-focus {
+	0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
 /* Section repertorio */
 section#repertorio {
     padding: 60px 15px 0px 15px;
