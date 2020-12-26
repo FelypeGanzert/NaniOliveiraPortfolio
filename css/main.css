@@ -886,4 +886,64 @@ footer#main-footer div {
   margin: 0 auto;
   text-align: center;
 }
+
+section#sucess-message {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  height: 90vh;
+}
+
+section#sucess-message h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+section#sucess-message div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#sucess-message img {
+  display: block;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section#sucess-message a#btn-return {
+  margin: 10px 0px;
+  padding: 10px 15px;
+  background: #333;
+  color: #fff;
+  display: block;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+section#sucess-message a#btn-return:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
 /*# sourceMappingURL=main.css.map */

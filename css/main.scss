@@ -619,3 +619,42 @@ footer#main-footer{
         text-align: center;
     }
 }
+
+section#sucess-message{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 90vh;
+    h2{
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 2rem;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    a#btn-return{
+        margin: 10px 0px;
+        padding: 10px 15px;
+        background: #333;
+        color: #fff;
+        display: block;
+        width: 100px;
+        text-align: center;
+        border-radius: 10px;
+        &:hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+}

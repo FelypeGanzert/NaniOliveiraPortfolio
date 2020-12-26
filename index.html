@@ -584,7 +584,8 @@ Nunca foi pro estrangeiro
         <h2 class="l-heading">CONTRATE</h2>
         <div class="bottom-line"></div>
         <div class="container">
-            <form action="#">
+            <form action='pages/sucess' name='contact-form' method='POST' data-netlify-recaptcha='true'><input
+                    type='hidden' name='form-name' value='contact-form' />
                 <div>
                     <p>
                         Descreva um pouco sobre o evento que faremos juntos:
@@ -602,7 +603,8 @@ Nunca foi pro estrangeiro
                         required></textarea>
                 </div>
                 <div>
-                    <label for="capacidade" style="margin-right: 15px;" >Qual a capacidade máxima desse ambiente?*</label>
+                    <label for="capacidade" style="margin-right: 15px;">Qual a capacidade máxima desse
+                        ambiente?*</label>
                     <input type="number" name="capacidade" id="capacidade" style="width: 100px;" min="0" required>
                 </div>
                 <div id="ingresso-horas-container">
@@ -619,7 +621,8 @@ Nunca foi pro estrangeiro
                         Quantas horas de show você vai precisar?
                         <div style="width: 100%;">
                             <input type="radio" name="horas" value="2h" id="horas-2h"> <label for="horas-2h">2hr</label>
-                            <input type="radio" name="horas" value="3h" id="horas-3h" checked> <label for="horas-3h">3hr</label>
+                            <input type="radio" name="horas" value="3h" id="horas-3h" checked> <label
+                                for="horas-3h">3hr</label>
                             <input type="radio" name="horas" value="4h" id="horas-4h"> <label for="horas-4h">4hr</label>
                         </div>
                     </div>
@@ -631,6 +634,26 @@ Nunca foi pro estrangeiro
                 <div>
                     <input type="submit" value="ENVIAR">
                 </div>
+                <div class='g-recaptcha' data-sitekey='6LdAvUIUAAAAAHjrjmjtNTcXyKm0WKwefLp-dQv9'></div>
+                <noscript>
+                    <div>
+                        <div style="width: 302px; height: 422px; position: relative;">
+                            <div style="width: 302px; height: 422px; position: absolute;">
+                                <iframe
+                                    src="https://www.google.com/recaptcha/api/fallback?k=6LdAvUIUAAAAAHjrjmjtNTcXyKm0WKwefLp-dQv9"
+                                    frameborder="0" scrolling="no"
+                                    style="width: 302px; height:422px; border-style: none;">
+                                </iframe>
+                            </div>
+                        </div>
+                        <div
+                            style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                            <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
+                                style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;">
+                            </textarea>
+                        </div>
+                    </div>
+                </noscript>
             </form>
         </div>
     </section>
