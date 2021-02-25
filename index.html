@@ -30,6 +30,7 @@
     <!-- navbar -->
     <nav id="main-nav">
         <div class="container">
+            <div id="menu">
             <ul>
                 <li><a href="#home">INÍCIO</a></li>
                 <li><a href="#bio">BIO</a></li>
@@ -37,6 +38,7 @@
                 <li><a href="#autorais">AUTORAIS</a></li>
                 <li><a href="#contact">CONTRATE</a></li>
             </ul>
+            </div>
         </div>
     </nav>
 
@@ -769,6 +771,14 @@ Nunca foi pro estrangeiro
 
 
     </script>
+
+    <script>
+        // Menu
+        document.getElementById('main-nav').addEventListener('click', () => {
+            document.getElementById('menu').classList.toggle('show');
+        });
+    </script>
+
 </body>
 
 </html>
