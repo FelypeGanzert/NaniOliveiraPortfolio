@@ -84,6 +84,10 @@ div.bottom-line {
           transform: scale(1.1);
 }
 
+.hide {
+  display: none !important;
+}
+
 /* main nav */
 nav#main-nav {
   z-index: 100;
@@ -317,6 +321,62 @@ div#main-video-container i {
   cursor: pointer;
   font-size: 70px;
   color: #fff;
+}
+
+/* Section aguarde */
+section#aguarde {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 70px 55px;
+  min-height: 500px;
+  max-height: 1500px;
+  height: 90vh;
+  background: url("../images/fundo-azul.png") no-repeat center center/cover;
+  outline-offset: -50px;
+  outline: 10px solid #fff;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+}
+
+section#aguarde h2 {
+  font-size: 8rem;
+  font-weight: bold;
+}
+
+section#aguarde h3 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+section#aguarde #cronometro-container {
+  padding: 20px 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+section#aguarde #cronometro-container .cronometro-grupo .tempo {
+  font-size: 4rem;
+}
+
+section#aguarde #cronometro-container .cronometro-grupo .medida-tempo {
+  font-size: 1.5rem;
+}
+
+section#aguarde #data-especial {
+  padding: 20px 0px;
+  font-size: 7rem;
+  font-weight: bold;
 }
 
 /* Section about */
@@ -1131,6 +1191,29 @@ section#sucess-message a#btn-return:hover {
   section#home .content .text div#name {
     margin-top: 50%;
     width: 300px;
+  }
+  /* Section aguarde */
+  section#aguarde {
+    padding: 30px;
+    outline-offset: -20px;
+    outline: 5px solid #fff;
+  }
+  section#aguarde h2 {
+    font-size: 5rem;
+  }
+  section#aguarde h3 {
+    font-size: 2.5rem;
+  }
+  section#aguarde #cronometro-container .cronometro-grupo .tempo {
+    font-size: 2.5rem;
+  }
+  section#aguarde #cronometro-container .cronometro-grupo .medida-tempo {
+    font-size: 1rem;
+  }
+  section#aguarde #data-especial {
+    padding: 20px 0px;
+    font-size: 4rem;
+    font-weight: bold;
   }
   /* Section about */
   section#bio {

@@ -91,6 +91,31 @@
             allowfullscreen></iframe>
     </div>
 
+    <section id="aguarde">
+        <h3>AGUARDE</h3>
+        <h2>10/09</h2>
+        <div id="cronometro-container">
+            <div class="cronometro-grupo">
+                <div id="cronometro-dias" class="tempo">00</div>
+                <div class="medida-tempo">dias</div>
+            </div>
+            <div class="cronometro-grupo">
+                <div id="cronometro-horas" class="tempo">00</div>
+                <div class="medida-tempo">horas</div>
+            </div>
+            <div class="cronometro-grupo">
+                <div id="cronometro-minutos" class="tempo">00</div>
+                <div class="medida-tempo">minutos</div>
+            </div>
+            <div class="cronometro-grupo">
+                <div id="cronometro-segundos" class="tempo">00</div>
+                <div class="medida-tempo">segundos</div>
+            </div>
+        </div>
+        <div class="hide" id="data-especial">
+            É HOJE!!
+        </div>
+    </section>
 
     <section id="bio">
         <h2 class="l-heading">BIO</h2>
@@ -777,6 +802,8 @@ Nunca foi pro estrangeiro
             document.getElementById('menu').classList.toggle('show');
         });
     </script>
+
+    <script src="cronometro.js"></script>
 
 </body>
 

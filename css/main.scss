@@ -69,6 +69,10 @@ div.bottom-line{
     }
 }
 
+.hide{
+    display: none !important;
+}
+
 /* main nav */
 nav#main-nav{
     z-index: 100;
@@ -229,6 +233,49 @@ div#main-video-container{
         cursor: pointer;
         font-size: 70px;
         color: #fff;
+    }
+}
+
+/* Section aguarde */
+section#aguarde {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 55px;
+    min-height: 500px;
+    max-height: 1500px;
+    height: 90vh;
+    background: url('../images/fundo-azul.png') no-repeat center center /cover;
+    outline-offset: -50px;
+    outline: 10px solid #fff;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    h2{
+        font-size: 8rem;
+        font-weight: bold;
+    }
+    h3{
+        font-size: 2rem;
+        font-weight: normal;
+    }
+    #cronometro-container{
+        padding: 20px 0px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        .cronometro-grupo{
+            .tempo{
+                font-size: 4rem;
+            }
+            .medida-tempo{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    #data-especial{
+        padding: 20px 0px;
+        font-size: 7rem;
+        font-weight: bold;
     }
 }
 
@@ -839,6 +886,33 @@ section#sucess-message{
                 margin-top: 50%;
                 width: 300px;
             }
+        }
+    }
+    /* Section aguarde */
+    section#aguarde {
+        padding: 30px;
+        outline-offset: -20px;
+        outline: 5px solid #fff;
+        h2{
+            font-size: 5rem;
+        }
+        h3{
+            font-size: 2.5rem;
+        }
+        #cronometro-container{
+            .cronometro-grupo{
+                .tempo{
+                    font-size: 2.5rem;
+                }
+                .medida-tempo{
+                    font-size: 1rem;
+                }
+            }
+        }
+        #data-especial{
+            padding: 20px 0px;
+            font-size: 4rem;
+            font-weight: bold;
         }
     }
     /* Section about */
