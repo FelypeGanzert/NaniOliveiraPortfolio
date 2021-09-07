@@ -684,7 +684,8 @@ section#autorais div.container-musics div.music-item .music-cover {
 
 section#autorais div.container-musics div.music-item .music-cover img {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  max-height: 360px;
   -o-object-fit: cover;
      object-fit: cover;
 }
