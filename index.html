@@ -44,18 +44,17 @@
 
     <!-- section home -->
     <section id="home">
-        <div class="video-container">
-            <video autoplay muted loop id="main-video">
-                <source src="videos/flores.mp4" type="video/mp4">
-            </video>
-        </div>
         <div class="content">
+            <div id="container-titulo-musica">
+                Dona de Si
+                <div class="line"></div>
+            </div>
             <div class="text">
                 <div id="name">
                     <img src="images/logo.png" alt="Logo">
                 </div>
                 <div class="music-play">
-                    <h3>Pra não dizer que não falei das flores</h3>
+                    <h3>Ouça agora!</h3>
                     <div class="play" id="main-video-play">
                         <i class="fas fa-play"></i>
                         Reproduzir
@@ -91,29 +90,22 @@
             allowfullscreen></iframe>
     </div>
 
-    <section id="aguarde">
-        <h3>AGUARDE</h3>
-        <h2>10/09</h2>
-        <div id="cronometro-container">
-            <div class="cronometro-grupo">
-                <div id="cronometro-dias" class="tempo">00</div>
-                <div class="medida-tempo">dias</div>
-            </div>
-            <div class="cronometro-grupo">
-                <div id="cronometro-horas" class="tempo">00</div>
-                <div class="medida-tempo">horas</div>
-            </div>
-            <div class="cronometro-grupo">
-                <div id="cronometro-minutos" class="tempo">00</div>
-                <div class="medida-tempo">minutos</div>
-            </div>
-            <div class="cronometro-grupo">
-                <div id="cronometro-segundos" class="tempo">00</div>
-                <div class="medida-tempo">segundos</div>
-            </div>
-        </div>
-        <div class="hide" id="data-especial">
-            É HOJE!!
+    <section id="dona-de-si">
+        <h2 class="l-heading">DONA DE SI</h2>
+        <div class="bottom-line"></div>
+        <div class="container">
+            <p>
+                A música “Dona de Si” surgiu antes da pandemia em meados de janeiro de 2020 e vem sendo maturada desde então por conta dos imprevistos que a situação mundial se pôs diante de todas as pessoas.
+            </p>
+            <p>
+                Mas essa maturação foi fundamental para que surgisse a melhor versão possível dessa música fazendo com que ela tivesse toda a atenção que merecesse na sua letra, arranjo e produção e finalmente, ela saiu.
+            </p>
+            <p>
+                É uma música feita para mulheres, as mulheres sempre tiveram papel fundamental na minha vida, fui criado numa casa cheia de mulheres e de perto vi a luta diária dessas guerreiras, mulheres que passaram pela minha vida e me deixaram muita admiração pela coragem e determinação em atividades cotidianas para nós homens e as quais não damos conta do nosso privilégio e também as mulheres que deixaram marcas no meu coração e essas eu tenho a agradecer por cumprirem o papel essencial na minha vida, no meu crescimento e aprendizagem.
+            </p>
+            <p>
+                A todas essas mulheres, minha singela homenagem, que vocês assim como todas as mulheres do mundo se empoderem dessa canção e sejam cada dia mais “Donas de si”.
+            </p>
         </div>
     </section>
 
@@ -757,7 +749,7 @@ Nunca foi pro estrangeiro
                 document.querySelector("#home").scrollIntoView();
             } else {
                 divMainVideoContainer.classList.add('visible');
-                iframeMainVideo.src = 'https://www.youtube.com/embed/L60ynrInByM';
+                iframeMainVideo.src = 'https://www.youtube.com/embed/GfzEv-zfQYk';
             }
         }
 

@@ -108,6 +108,32 @@ nav#main-nav{
     }
 }
 
+@keyframes slidein {
+    from {
+        -webkit-transform: scale3d(0);
+        transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale3d(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
 /* section home */
 section#home{
     position: relative;
@@ -119,6 +145,27 @@ section#home{
     justify-content: center;
     text-align: center;
     color: #fff;
+    background: url('../images/fundo-azul.png') no-repeat center center /cover;
+    #container-titulo-musica{
+        text-shadow: rgb(0,0,0) 2px 2px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        font-size: 6rem;
+        font-weight: 500;
+        line-height: 6rem;
+        animation: pulse 1s ease-in-out infinite both;
+        div.line{
+            height: 5px;
+            width: 300px;
+            background-color: #fff;
+        }
+    }
     /* video */
     .video-container{
         z-index: -10;
@@ -236,46 +283,22 @@ div#main-video-container{
     }
 }
 
-/* Section aguarde */
-section#aguarde {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 70px 55px;
-    min-height: 500px;
-    max-height: 1500px;
-    height: 90vh;
+/* Section about */
+section#dona-de-si {
+    padding: 60px;
+    text-align: justify;
     background: url('../images/fundo-azul.png') no-repeat center center /cover;
-    outline-offset: -50px;
+    outline-offset: -40px;
     outline: 10px solid #fff;
     color: #fff;
-    text-align: center;
-    line-height: 1;
-    h2{
-        font-size: 8rem;
-        font-weight: bold;
+    p{
+        margin-bottom: 15px;
     }
-    h3{
-        font-size: 2rem;
-        font-weight: normal;
+    .container{
+        margin-top: 50px;
     }
-    #cronometro-container{
-        padding: 20px 0px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        .cronometro-grupo{
-            .tempo{
-                font-size: 4rem;
-            }
-            .medida-tempo{
-                font-size: 1.5rem;
-            }
-        }
-    }
-    #data-especial{
-        padding: 20px 0px;
-        font-size: 7rem;
-        font-weight: bold;
+    .bottom-line{
+        background: #fff;
     }
 }
 
@@ -722,6 +745,15 @@ section#sucess-message{
     }
     /* section home */
     section#home{
+        #container-titulo-musica{
+            font-size: 4rem;
+            line-height: 4rem;
+            div.line{
+                height: 5px;
+                width: 200px;
+                background-color: #fff;
+            }
+        }
         /* social links */
         .social-links{
             margin-right: 15px;
@@ -869,8 +901,22 @@ section#sucess-message{
             max-height: 400px;
         }
     }
+    /* Section about */
+    section#dona-de-si {
+        padding: 60px 40px;
+        outline-offset: -20px;
+    }
+
    /* section home */
     section#home{
+        #container-titulo-musica{
+            font-size: 3rem;
+            line-height: 3rem;
+            div.line{
+                height: 2px;
+                width: 100px;
+            }
+        }
         /* social links */
         .social-links{
             ul{   
@@ -884,8 +930,7 @@ section#sucess-message{
         }
         .content .text{
             div#name{
-                margin-top: 50%;
-                width: 300px;
+                width: 250px;
             }
         }
     }

@@ -138,6 +138,58 @@ nav#main-nav ul li:hover a:after {
           transform: scale(1);
 }
 
+@-webkit-keyframes slidein {
+  from {
+    -webkit-transform: scale3d(0);
+    transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale3d(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes slidein {
+  from {
+    -webkit-transform: scale3d(0);
+    transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale3d(1);
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 /* section home */
 section#home {
   position: relative;
@@ -158,8 +210,41 @@ section#home {
           justify-content: center;
   text-align: center;
   color: #fff;
+  background: url("../images/fundo-azul.png") no-repeat center center/cover;
   /* video */
   /* social links */
+}
+
+section#home #container-titulo-musica {
+  text-shadow: black 2px 2px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 6rem;
+  -webkit-animation: pulse 1s ease-in-out infinite both;
+          animation: pulse 1s ease-in-out infinite both;
+}
+
+section#home #container-titulo-musica div.line {
+  height: 5px;
+  width: 300px;
+  background-color: #fff;
 }
 
 section#home .video-container {
@@ -323,60 +408,26 @@ div#main-video-container i {
   color: #fff;
 }
 
-/* Section aguarde */
-section#aguarde {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 70px 55px;
-  min-height: 500px;
-  max-height: 1500px;
-  height: 90vh;
+/* Section about */
+section#dona-de-si {
+  padding: 60px;
+  text-align: justify;
   background: url("../images/fundo-azul.png") no-repeat center center/cover;
-  outline-offset: -50px;
+  outline-offset: -40px;
   outline: 10px solid #fff;
   color: #fff;
-  text-align: center;
-  line-height: 1;
 }
 
-section#aguarde h2 {
-  font-size: 8rem;
-  font-weight: bold;
+section#dona-de-si p {
+  margin-bottom: 15px;
 }
 
-section#aguarde h3 {
-  font-size: 2rem;
-  font-weight: normal;
+section#dona-de-si .container {
+  margin-top: 50px;
 }
 
-section#aguarde #cronometro-container {
-  padding: 20px 0px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-}
-
-section#aguarde #cronometro-container .cronometro-grupo .tempo {
-  font-size: 4rem;
-}
-
-section#aguarde #cronometro-container .cronometro-grupo .medida-tempo {
-  font-size: 1.5rem;
-}
-
-section#aguarde #data-especial {
-  padding: 20px 0px;
-  font-size: 7rem;
-  font-weight: bold;
+section#dona-de-si .bottom-line {
+  background: #fff;
 }
 
 /* Section about */
@@ -1018,6 +1069,15 @@ section#sucess-message a#btn-return:hover {
   section#home {
     /* social links */
   }
+  section#home #container-titulo-musica {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  section#home #container-titulo-musica div.line {
+    height: 5px;
+    width: 200px;
+    background-color: #fff;
+  }
   section#home .social-links {
     margin-right: 15px;
   }
@@ -1179,9 +1239,22 @@ section#sucess-message a#btn-return:hover {
   div#main-video-container iframe {
     max-height: 400px;
   }
+  /* Section about */
+  section#dona-de-si {
+    padding: 60px 40px;
+    outline-offset: -20px;
+  }
   /* section home */
   section#home {
     /* social links */
+  }
+  section#home #container-titulo-musica {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  section#home #container-titulo-musica div.line {
+    height: 2px;
+    width: 100px;
   }
   section#home .social-links ul li {
     font-size: 35px;
@@ -1190,8 +1263,7 @@ section#sucess-message a#btn-return:hover {
     margin-bottom: 25px;
   }
   section#home .content .text div#name {
-    margin-top: 50%;
-    width: 300px;
+    width: 250px;
   }
   /* Section aguarde */
   section#aguarde {
