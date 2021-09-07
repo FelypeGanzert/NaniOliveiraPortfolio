@@ -216,7 +216,6 @@ section#home {
 }
 
 section#home #container-titulo-musica {
-  text-shadow: black 2px 2px 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,17 +233,14 @@ section#home #container-titulo-musica {
   height: 100%;
   width: 100%;
   position: absolute;
-  font-size: 6rem;
-  font-weight: 500;
-  line-height: 6rem;
-  -webkit-animation: pulse 1s ease-in-out infinite both;
-          animation: pulse 1s ease-in-out infinite both;
+  -webkit-animation: slidein 2s ease-in-out;
+          animation: slidein 2s ease-in-out;
 }
 
-section#home #container-titulo-musica div.line {
-  height: 5px;
-  width: 300px;
-  background-color: #fff;
+section#home #container-titulo-musica div#dona-de-si-titulo {
+  width: 600px;
+  height: 300px;
+  background: url("../images/titulo-dona-de-si.svg") no-repeat center center/cover;
 }
 
 section#home .video-container {
@@ -343,13 +339,13 @@ section#home .content .text div#name {
   top: 0;
   left: 0;
   margin: 50px 0px 0px 50px;
-  width: 450px;
+  width: 350px;
 }
 
 section#home .content .text div#name img {
   width: 100%;
-  -webkit-filter: drop-shadow(5px 5px 5px #333);
-          filter: drop-shadow(5px 5px 5px #333);
+  -webkit-filter: brightness(20);
+          filter: brightness(20);
 }
 
 section#home .content .text h1 {
@@ -1069,14 +1065,9 @@ section#sucess-message a#btn-return:hover {
   section#home {
     /* social links */
   }
-  section#home #container-titulo-musica {
-    font-size: 4rem;
-    line-height: 4rem;
-  }
-  section#home #container-titulo-musica div.line {
-    height: 5px;
-    width: 200px;
-    background-color: #fff;
+  section#home #container-titulo-musica div#dona-de-si-titulo {
+    width: 500px;
+    height: 200px;
   }
   section#home .social-links {
     margin-right: 15px;
@@ -1248,13 +1239,9 @@ section#sucess-message a#btn-return:hover {
   section#home {
     /* social links */
   }
-  section#home #container-titulo-musica {
-    font-size: 3rem;
-    line-height: 3rem;
-  }
-  section#home #container-titulo-musica div.line {
-    height: 2px;
-    width: 100px;
+  section#home #container-titulo-musica div#dona-de-si-titulo {
+    width: 350px;
+    height: 250px;
   }
   section#home .social-links ul li {
     font-size: 35px;
@@ -1384,6 +1371,42 @@ section#sucess-message a#btn-return:hover {
   }
   section#contact form div#ingresso-horas-container div {
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  /* section home */
+  section#home #container-titulo-musica {
+    padding-left: 10px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  section#home #container-titulo-musica div#dona-de-si-titulo {
+    width: 280px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 350px) {
+  /* section home */
+  section#home #container-titulo-musica {
+    padding-left: 10px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  section#home #container-titulo-musica div#dona-de-si-titulo {
+    width: 200px;
+    height: 100px;
+  }
+  section#home .content .text div#name {
+    width: 200px;
+  }
+  section#home .content .text div#name img {
+    width: 100%;
+    -webkit-filter: brightness(20);
+            filter: brightness(20);
   }
 }
 /*# sourceMappingURL=main.css.map */

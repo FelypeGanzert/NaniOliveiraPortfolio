@@ -147,7 +147,6 @@ section#home{
     color: #fff;
     background: url('../images/fundo-azul.png') no-repeat center center /cover;
     #container-titulo-musica{
-        text-shadow: rgb(0,0,0) 2px 2px 5px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -156,14 +155,11 @@ section#home{
         height: 100%;
         width: 100%;
         position: absolute;
-        font-size: 6rem;
-        font-weight: 500;
-        line-height: 6rem;
-        animation: pulse 1s ease-in-out infinite both;
-        div.line{
-            height: 5px;
-            width: 300px;
-            background-color: #fff;
+        animation: slidein 2s ease-in-out;//pulse 1s ease-in-out infinite both;
+        div#dona-de-si-titulo{
+            width: 600px;
+            height: 300px;
+            background: url('../images/titulo-dona-de-si.svg') no-repeat center center /cover;
         }
     }
     /* video */
@@ -234,10 +230,10 @@ section#home{
             top: 0;
             left: 0;
             margin: 50px 0px 0px 50px;
-            width: 450px;  
+            width: 350px;  
             img{
                 width: 100%;
-                filter: drop-shadow(5px 5px 5px #333);
+                filter: brightness(20);
             }
         }
         h1{
@@ -745,13 +741,10 @@ section#sucess-message{
     }
     /* section home */
     section#home{
-        #container-titulo-musica{
-            font-size: 4rem;
-            line-height: 4rem;
-            div.line{
-                height: 5px;
-                width: 200px;
-                background-color: #fff;
+            #container-titulo-musica{
+            div#dona-de-si-titulo{
+                width: 500px;
+                height: 200px;
             }
         }
         /* social links */
@@ -910,11 +903,9 @@ section#sucess-message{
    /* section home */
     section#home{
         #container-titulo-musica{
-            font-size: 3rem;
-            line-height: 3rem;
-            div.line{
-                height: 2px;
-                width: 100px;
+            div#dona-de-si-titulo{
+                width: 350px;
+                height: 250px;
             }
         }
         /* social links */
@@ -1048,6 +1039,46 @@ section#sucess-message{
                 grid-template-columns: repeat(1, 1fr);
                 div{
                     margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 500px){
+
+    /* section home */
+    section#home{
+        #container-titulo-musica{
+            padding-left: 10px;
+            align-items: flex-start;
+            div#dona-de-si-titulo{
+                width: 280px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 350px){
+
+    /* section home */
+    section#home{
+        #container-titulo-musica{
+            padding-left: 10px;
+            align-items: flex-start;
+            div#dona-de-si-titulo{
+                width: 200px;
+                height: 100px;
+            }
+        }
+        .content .text{
+            div#name{
+                width: 200px;  
+                img{
+                    width: 100%;
+                    filter: brightness(20);
                 }
             }
         }
